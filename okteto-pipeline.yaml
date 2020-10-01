@@ -1,0 +1,5 @@
+icon: https://raw.githubusercontent.com/litmuschaos/icons/master/litmus.png
+deploy:
+  - envsubst < manifests/k8s.yaml.template > manifests/k8s.yaml
+  - kubectl apply -f manifests/k8s.yaml
+  - kubectl apply -f manifests/app.yaml
